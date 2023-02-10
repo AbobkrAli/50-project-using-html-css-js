@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Ubuntu','sans-serif';
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    margin: 0;
+    
+}
+.bg{
+    position: absolute;
+    background: url('greatplus.jpg') no-repeat center center/cover;
+    z-index: -1;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    filter:grayscale(80%) blur(10px);
+}
+.loading-text{
+    font-size: 50px;
+    color: #fff;
+    z-index: 1;
+
+}

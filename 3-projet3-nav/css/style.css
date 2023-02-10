@@ -1,0 +1,88 @@
+body{
+    overflow-x: hidden;
+    background-color: #222;
+    color: #333;
+    margin: auto;
+}
+.container{
+    width: 100vw;
+    padding:50px;
+    /* max-width: 1000px; */
+    transform-origin:top left;
+    transition:transform .5s ease;
+    background-color: #ddd;
+    margin: auto;
+
+}
+.container.show-nav{
+transform:rotate(-20deg)
+}
+.content{
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+.circle-container{
+    background-color:#ff7979;
+    position:fixed;
+    border-radius: 50%;
+    left:-100px;
+    top:-100px;
+    transition: all .3s ease;
+}
+.container.show-nav .circle-container{
+    transform: rotate(-90deg);
+    display: fixed;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    transition:transform 0.5s linear;
+    border-radius: 50%;
+    position: relative;
+
+}
+.circle button{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    height:100px;
+    background-color: transparent;
+    border:0;
+    font-size: 26px;    
+    cursor: pointer;
+    color: #fff;
+}
+.circle button:focus{
+    outline:none;
+
+}
+.circle button.open{
+    left: 60%;
+}
+.circle button.close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+.nav{
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 10;
+}
+nav ul{
+    list-style: none;
+    padding-left: 30px;
+}
+li{
+    text-transform: uppercase;
+    color: #fff;
+    margin:40px 0;
+}
+li i{
+    margin-right: 10px;
+}
