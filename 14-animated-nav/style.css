@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to bottom,red 0%,red 50%, green 50%, green 100%);
+}
+
+nav{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: width 0.6s linear;
+  width: 80px;
+  box-shadow:0px 2px rgba(0,0,0,0.3)
+}
+nav.active{
+  width: 350PX;
+  transform: translateX(-162px);
+}
+ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin:0;
+  width:0;
+  transition: all 0.3s linear;
+}
+nav.active  ul{
+  width:100%;
+}
+ul li{
+  margin: 0 10px;
+  transform: rotate(0deg);
+  opacity: 0;
+  transition: all 0.6s linear;
+}
+ul li a{
+  color: black;
+  text-decoration: none;
+}
+nav.active li{
+  opacity: 1;
+  transform:rotateY(360deg)
+}
+nav .icon{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.icon .line{
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background-color: #000;
+
+}
+.icon .line2{
+  top:auto;
+  bottom:5px;
+  transform: all .3s ;
+}
+nav.active .line1{
+  transform:rotate(765deg) translate(1px,1px);
+}
+nav.active .line2{
+  transform:rotate(-765deg) translate(5px,-5px);
+}
