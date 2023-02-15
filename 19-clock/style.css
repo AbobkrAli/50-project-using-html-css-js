@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+:root{
+  --primary-color: #000;
+  --secondary-color:#fff;
+  --body-color:#333;
+  --font-primary:'Heebo', sans-serif;
+  --transition-primary:all .3s ease;
+  --transition-secondary:all .3s linear;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--body-color);
+  transition: var(--transition-primary);
+}
+button.btn{
+padding: 5px 10px;
+background-color: var(--primary-color);
+color: var(--secondary-color);
+border-radius: 10px;
+border:1px solid var(--primary-color);
+font-size: 13px;
+position: absolute;
+top:80px;
+font-family: inherit;
+transition: var(--transition-primary);
+cursor: pointer;
+}
+.clock{
+  background-color: var(--secondary-color);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  margin: 20px auto;
+  transition: var(--transition-primary);
+}
+.point{
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  top: 49%;
+  left: 51%;
+  transform: translate(-50%,-50%);
+  background-color: var(--primary-color);
+  z-index: 1;
+  border-radius:50% ;
+}
+.point::after{
+  content: "";
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  top: 49%;
+  left: 51%;
+  transform: translate(-50%,-50%);
+  background-color: #555;
+  z-index: 2;
+  border-radius:50% ;
+}
+
+.clock span{
+  background-color: black;
+  width: 3px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transform: rotate(212deg);
+  border-radius:6px ;
+}
+
+.clock .hour-needle{
+  height: 50px;
+  width: 4px;
+  background-color: var(--primary-color);
+  transform: rotate(180deg);
+  transition: var(--transition-primary);
+
+}
+.clock .minuate-needle{
+  transform: rotate(10deg);
+  height: 60px;
+  background-color: var(--primary-color);
+  transition: var(--transition-primary);
+
+}
+.clock .second-needle{
+  transform: rotate(210deg);
+  background-color:#610861;
+  transition: var(--transition-primary);
+
+}
+body > h1{
+  margin: 10px auto 0;
+  color: var(--secondary-color);
+  display: inline; 
+
+}
+.ampm{
+  margin: 0px auto 20px;
+  color: var(--secondary-color);
+  font-size: 20px;
+  display: inline;
+}
+body > p{
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: var(--secondary-color);
+}
+span.day{
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  display: inline-block;
+  text-align: center;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
