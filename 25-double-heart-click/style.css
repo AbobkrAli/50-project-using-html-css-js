@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #ddd;
+}
+main{
+  width: 300px;
+  height: 100vh;
+
+}
+main h2{
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  fon
+}
+main h2 i{
+  color: red;
+
+}
+main > p{
+  text-align: center;
+  color: #333;
+  font-size: .9rem;
+}
+main p span{
+  color: red;
+}
+.card{
+  width: 200px;
+  height: 350px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px #333 ;
+  position: relative;
+  background-image: url(pexels-ricardo-oliveira-14918794.jpg);
+  background-size: cover ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all .3s ease;
+
+} 
+.card i{
+  color: red;
+  position: absolute;
+
+  transform: scale(0);
+  opacity: 1;
+  transition: all .3s ease;
+  z-index: 3;
+}
+i.style{
+  animation: popup .3s ease  ;
+  
+}
+@keyframes popup {
+  0%{
+    opacity:0;
+    transform: scale(0);
+
+  }
+  50%{
+    opacity: 1;
+    transform: scale(5);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(10);
+  }
+}
